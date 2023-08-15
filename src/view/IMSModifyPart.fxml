@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="495.0" prefWidth="528.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.IMSModifyPart">
+    <children>
+        <Button fx:id="mpSaveButton" layoutX="383.0" layoutY="400.0" mnemonicParsing="false" onAction="#onSave" text="Save" />
+        <Button fx:id="modifyPartCancelButton" layoutX="446.0" layoutY="400.0" mnemonicParsing="false" onAction="#toMain" text="Cancel" />
+        <RadioButton fx:id="modifyPartInHouseRB" layoutX="181.0" layoutY="79.0" mnemonicParsing="false" onAction="#onMPInHouse" selected="true" text="In-House">
+         <toggleGroup>
+            <ToggleGroup fx:id="tgroup" />
+         </toggleGroup></RadioButton>
+        <RadioButton fx:id="modifyPartOutsourcedRB" layoutX="278.0" layoutY="79.0" mnemonicParsing="false" onAction="#onMPOutsourced" text="Outsourced" toggleGroup="$tgroup" />
+        <TextField fx:id="partID" editable="false" layoutX="141.0" layoutY="167.0" />
+        <TextField fx:id="partName" layoutX="141.0" layoutY="209.0" />
+        <TextField fx:id="partInventory" layoutX="141.0" layoutY="235.0" />
+        <TextField fx:id="partPrice" layoutX="141.0" layoutY="269.0" />
+        <TextField fx:id="partMax" layoutX="141.0" layoutY="303.0" />
+        <TextField fx:id="partChanging" layoutX="141.0" layoutY="337.0" />
+        <TextField fx:id="partMin" layoutX="349.0" layoutY="303.0" />
+        <Label fx:id="mpChangingLabel" layoutX="42.0" layoutY="341.0" text="Machine ID" />
+        <Label layoutX="51.0" layoutY="79.0" text="Modify Part">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font></Label>
+        <Label layoutX="42.0" layoutY="307.0" text="Max" />
+        <Label layoutX="42.0" layoutY="239.0" text="Inv" />
+        <Label layoutX="42.0" layoutY="204.0" text="Name" />
+        <Label layoutX="319.0" layoutY="307.0" text="Min" />
+        <Label layoutX="42.0" layoutY="171.0" text="ID" />
+        <Label layoutX="42.0" layoutY="273.0" text="Price/Cost" />
+    </children>
+</AnchorPane>
